@@ -57,7 +57,7 @@ void InitializeObstacles() {
         // 장애물 y 좌표 설정 (ground에 닿도록)
         float y = -0.75f;
         obstacles.push_back(EnemyBlock(xStart, y, height));
-        xStart += 0.4f;  // 간격 조정
+        xStart += 0.6f;  // 간격 조정
     }
 }
 
