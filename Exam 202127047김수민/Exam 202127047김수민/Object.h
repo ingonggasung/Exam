@@ -13,9 +13,9 @@ public:
     virtual void Draw() const;
     virtual void OnCollisionEnter(Object& other);
 
-    void Move(Transform::Vector meter);
+    void Move(float dx, float dy);
     void Rotate(float angle_degree);
-    void Scale(Transform::Vector meter);
+    void Scale(float sx, float sy);
 
     bool IsCollidingWith(const Object& other) const;
 };
@@ -49,4 +49,4 @@ public:
     void UpdateRotation(float deltaAngle); // 각도 업데이트 메서드 추가
 };
 
-int PhysicsAABB(const Object& A, const Object& B);
+bool PhysicsAABB(const Object& A, const Object& B);

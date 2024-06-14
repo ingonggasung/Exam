@@ -11,8 +11,6 @@
 
 #include <GLFW/glfw3.h>
 #include <stdio.h>
-#include <chrono>
-#include <thread>
 #include <cmath>
 #include <vector>
 #include <cstdlib>
@@ -57,7 +55,7 @@ void InitializeObstacles() {
         // 장애물 높이 랜덤 설정 (100픽셀 또는 300픽셀)
         float height = (rand() % 2 == 0) ? 100.0f / 600.0f * 2 : 300.0f / 600.0f * 2;
         // 장애물 y 좌표 설정 (ground에 닿도록)
-        float y = -0.75f;  // 바닥이 -0.75f
+        float y = -0.75f;
         obstacles.push_back(EnemyBlock(xStart, y, height));
         xStart += 0.4f;  // 간격 조정
     }
@@ -78,14 +76,14 @@ int Physics() {
 
     // 장애물 이동 및 충돌 처리
     for (auto& obstacle : obstacles) {
-        obstacle.Move({ -0.01f, 0.0f });  // 장애물 왼쪽으로 이동
+        obstacle.Move(-0.01f, 0.0f);  // 장애물 왼쪽으로 이동
         if (obstacle.x + obstacle.width < -1.0f) {
             // 장애물이 화면을 벗어나면 오른쪽 끝으로 이동
             obstacle.x = 1.0f;
             // 장애물 높이 랜덤 설정 (100픽셀 또는 300픽셀)
             float height = (rand() % 2 == 0) ? 100.0f / 600.0f * 2 : 300.0f / 600.0f * 2;
             // 장애물 y 좌표 설정 (ground에 닿도록)
-            obstacle.y = -0.75f;  // 바닥이 -0.75f
+            obstacle.y = -0.75f;
             obstacle.height = height;
         }
         if (PhysicsAABB(player, obstacle)) {
@@ -106,7 +104,7 @@ int Initialize() {
 
 int Update() {
     for (auto& star : stars) {
-        star.Move({ -0.016f, 0.0f });  // 별 왼쪽으로 이동 (장애물 속도의 1/3)
+        star.Move(-0.01f / 3, 0.0f);  // 별 왼쪽으로 이동 (장애물 속도의 1/3)
         star.UpdateRotation(1.0f);  // 각도 업데이트
         if (star.x < -1.0f) {
             star.x = 1.0f;  // 별이 화면을 벗어나면 오른쪽 끝으로 이동

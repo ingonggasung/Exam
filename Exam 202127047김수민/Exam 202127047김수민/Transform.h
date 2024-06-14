@@ -17,10 +17,12 @@ namespace Transform {
     Vertex ApplyMatrix(const Matrix& mat, const Vertex& v);
     Matrix TranslationMatrix(float tx, float ty);
     Matrix RotationMatrix(float angle_degree);
+    Vertex RotateVertex(const Vertex& point, float angle_degree);
 }
 
 class TransformStack {
 public:
+    TransformStack();
     void Push();
     void Pop();
     void LoadIdentity();
@@ -30,4 +32,3 @@ public:
 private:
     std::stack<Transform::Matrix> stack;
 };
-

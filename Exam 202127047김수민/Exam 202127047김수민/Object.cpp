@@ -1,4 +1,5 @@
 #include "Object.h"
+#include "Transform.h"
 #include <cmath>
 
 #ifndef M_PI
@@ -21,11 +22,9 @@ void Object::Draw() const {
 
 void Object::OnCollisionEnter(Object& other) {}
 
-void Object::Move(Transform::Vector meter) {
-    Transform::Vertex v = { x, y };
-    v = Transform::MoveVertex(v, meter);
-    x = v.x;
-    y = v.y;
+void Object::Move(float dx, float dy) {
+    x += dx;
+    y += dy;
 }
 
 void Object::Rotate(float angle_degree) {
@@ -46,9 +45,9 @@ void Object::Rotate(float angle_degree) {
     }
 }
 
-void Object::Scale(Transform::Vector meter) {
-    width *= meter.x_meter;
-    height *= meter.y_meter;
+void Object::Scale(float sx, float sy) {
+    width *= sx;
+    height *= sy;
 }
 
 bool Object::IsCollidingWith(const Object& other) const {
@@ -77,7 +76,7 @@ void Player::Draw() const {
 void Player::OnCollisionEnter(Object& other) {}
 
 EnemyBlock::EnemyBlock(float x, float y, float height)
-    : Object(x, -0.75f, 50.0f / 800.0f * 2, height, 0.0f, 1.0f, 0.0f) {} // y 좌표를 -0.75f로 설정
+    : Object(x, y, 50.0f / 800.0f * 2, height, 0.0f, 1.0f, 0.0f) {}
 
 void EnemyBlock::OnCollisionEnter(Object& other) {}
 
@@ -96,30 +95,37 @@ void Star::UpdateRotation(float deltaAngle) {
 }
 
 void Star::Draw() const {
+    TransformStack transformStack;
+    transformStack.LoadIdentity();
+    transformStack.Push();
+
+    // 중심점으로 이동
+    transformStack.MultMatrix(Transform::TranslationMatrix(x + width / 2, y + height / 2));
+    // 회전
+    transformStack.MultMatrix(Transform::RotationMatrix(angle));
+    // 원래 위치로 이동
+    transformStack.MultMatrix(Transform::TranslationMatrix(-(x + width / 2), -(y + height / 2)));
+
     glColor3f(r, g, b);
-    glPushMatrix();
-    glTranslatef(x + width / 2, y + height / 2, 0.0f);
-    glRotatef(angle, 0.0f, 0.0f, 1.0f);
-    glTranslatef(-(x + width / 2), -(y + height / 2), 0.0f);
     glBegin(GL_TRIANGLE_FAN);
     float angle_offset = M_PI / 2; // Rotate star to point upwards
     for (int i = 0; i < 5; ++i) {
         float angle_deg = 72.0f * i + 18.0f; // 72 degrees between points, start at 18 degrees
         float angle_rad = angle_deg * M_PI / 180.0f;
-        float outer_x = x + width / 2 * cos(angle_rad + angle_offset);
-        float outer_y = y + height / 2 * sin(angle_rad + angle_offset);
-        glVertex2f(outer_x, outer_y);
+        Transform::Vertex outer = { x + width / 2 * cos(angle_rad + angle_offset), y + height / 2 * sin(angle_rad + angle_offset) };
+        outer = transformStack.TransformVertex(outer);
+        glVertex2f(outer.x, outer.y);
 
         angle_deg += 36.0f; // 36 degrees between outer and inner points
         angle_rad = angle_deg * M_PI / 180.0f;
-        float inner_x = x + width / 4 * cos(angle_rad + angle_offset);
-        float inner_y = y + height / 4 * sin(angle_rad + angle_offset);
-        glVertex2f(inner_x, inner_y);
+        Transform::Vertex inner = { x + width / 4 * cos(angle_rad + angle_offset), y + height / 4 * sin(angle_rad + angle_offset) };
+        inner = transformStack.TransformVertex(inner);
+        glVertex2f(inner.x, inner.y);
     }
     glEnd();
-    glPopMatrix();
+    transformStack.Pop();
 }
 
-int PhysicsAABB(const Object& A, const Object& B) {
+bool PhysicsAABB(const Object& A, const Object& B) {
     return A.IsCollidingWith(B);
 }
