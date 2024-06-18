@@ -1,6 +1,5 @@
 #pragma once
 #include <GLFW/glfw3.h>
-#include "Transform.h"
 
 // Base class
 class Object {
@@ -24,12 +23,13 @@ public:
 class Player : public Object {
 public:
     Player(float x, float y);
-    void Draw() const override;
+    void Draw(float rotationAngle) const; // 회전 각도 인자 추가
     void OnCollisionEnter(Object& other) override;
 };
 
 class EnemyBlock : public Object {
 public:
+    EnemyBlock(); // 기본 생성자 추가
     EnemyBlock(float x, float y, float height);
     void OnCollisionEnter(Object& other) override;
 };

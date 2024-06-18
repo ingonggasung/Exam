@@ -1,0 +1,109 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|solutionrelative:Exam 202127047\uAE40\uC218\uBBFC\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|solutionrelative:Exam 202127047\uAE40\uC218\uBBFC\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|solutionrelative:Exam 202127047\uAE40\uC218\uBBFC\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|solutionrelative:Exam 202127047\uAE40\uC218\uBBFC\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Transform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69BFFCFE-63A1-41EC-85B8-4D04D776ECBF}|Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC.vcxproj|solutionrelative:Exam 202127047\uAE40\uC218\uBBFC\\Transform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 205,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Object.h",
+              "DocumentMoniker": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Object.h",
+              "RelativeDocumentMoniker": "Exam 202127047\uAE40\uC218\uBBFC\\Object.h",
+              "ToolTip": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Object.h",
+              "RelativeToolTip": "Exam 202127047\uAE40\uC218\uBBFC\\Object.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-14T09:46:22.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\main.cpp",
+              "RelativeDocumentMoniker": "Exam 202127047\uAE40\uC218\uBBFC\\main.cpp",
+              "ToolTip": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\main.cpp",
+              "RelativeToolTip": "Exam 202127047\uAE40\uC218\uBBFC\\main.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB0AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-14T09:46:21.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Transform.cpp",
+              "DocumentMoniker": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Transform.cpp",
+              "RelativeDocumentMoniker": "Exam 202127047\uAE40\uC218\uBBFC\\Transform.cpp",
+              "ToolTip": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Transform.cpp",
+              "RelativeToolTip": "Exam 202127047\uAE40\uC218\uBBFC\\Transform.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-14T09:46:22.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Transform.h",
+              "DocumentMoniker": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Transform.h",
+              "RelativeDocumentMoniker": "Exam 202127047\uAE40\uC218\uBBFC\\Transform.h",
+              "ToolTip": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Transform.h",
+              "RelativeToolTip": "Exam 202127047\uAE40\uC218\uBBFC\\Transform.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-14T09:46:22.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Object.cpp",
+              "DocumentMoniker": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Object.cpp",
+              "RelativeDocumentMoniker": "Exam 202127047\uAE40\uC218\uBBFC\\Object.cpp",
+              "ToolTip": "D:\\Exam\\Exam 202127047\uAE40\uC218\uBBFC\\Exam 202127047\uAE40\uC218\uBBFC\\Object.cpp",
+              "RelativeToolTip": "Exam 202127047\uAE40\uC218\uBBFC\\Object.cpp",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAYwIgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-14T09:46:22.154Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,4 @@
 #pragma once
-#include <cmath>
-#include <stack>
 
 namespace Transform {
     struct Vertex {
@@ -8,27 +6,5 @@ namespace Transform {
         float y;
     };
 
-    struct Matrix {
-        float m[3][3];
-    };
-
-    Matrix IdentityMatrix();
-    Matrix MultiplyMatrix(const Matrix& a, const Matrix& b);
-    Vertex ApplyMatrix(const Matrix& mat, const Vertex& v);
-    Matrix TranslationMatrix(float tx, float ty);
-    Matrix RotationMatrix(float angle_degree);
-    Vertex RotateVertex(const Vertex& point, float angle_degree);
+    Vertex RotateVertex(const Vertex& point, float angle_degree, float aspect_ratio);
 }
-
-class TransformStack {
-public:
-    TransformStack();
-    void Push();
-    void Pop();
-    void LoadIdentity();
-    void MultMatrix(const Transform::Matrix& mat);
-    Transform::Vertex TransformVertex(const Transform::Vertex& v);
-
-private:
-    std::stack<Transform::Matrix> stack;
-};
