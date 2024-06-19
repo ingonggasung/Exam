@@ -25,6 +25,7 @@ public:
     Player(float x, float y);
     void Draw(float rotationAngle) const; // 회전 각도 인자 추가
     void OnCollisionEnter(Object& other) override;
+    void SetHeight(float newHeight); // 추가된 메서드
 };
 
 class EnemyBlock : public Object {

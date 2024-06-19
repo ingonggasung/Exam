@@ -94,11 +94,13 @@ int Physics() {
 
     // 플레이어 위치 업데이트
     if (isJumping) {
+        player.SetHeight(50.0f / 800.0f * 2); // 점프 중일 때 높이 설정
         rotationAngle += 360.0f * (0.016f / (2.0f * jumpForce / -gravity)); // 점프 동안 360도 회전
     }
 
     if (player.y <= groundHeight) {
         player.y = groundHeight;
+        player.SetHeight((50.0f / 800.0f * 2) * (800.0f / 600.0f)); // 착지 시 높이 재설정
         isJumping = false;
         verticalVelocity = 0.0f;
         rotationAngle = 0.0f; // 착지 시 회전 각도 초기화

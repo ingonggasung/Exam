@@ -77,6 +77,10 @@ void Player::Draw(float rotationAngle) const {
 
 void Player::OnCollisionEnter(Object& other) {}
 
+void Player::SetHeight(float newHeight) {
+    this->height = newHeight;
+}
+
 EnemyBlock::EnemyBlock()
     : Object(0.0f, 0.0f, 50.0f / 800.0f * 2, 100.0f / 600.0f * 2, 0.0f, 1.0f, 0.0f) {} // 기본 생성자 정의
 
